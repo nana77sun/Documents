@@ -1,28 +1,16 @@
 
 
-
 ====
 
+![alt text][logo]
 
- ** test **
- 
 --------
 
 
-    # mkdir
-    # cd test
+    # 代码写在这里
     
-> first
 
+----
+图片参照
 
-#### a
-
-#### b
-
-1. a
-2. b
-3. c
-
- - a
- - b
- - c
+[logo]: ../images/test.gif "图片说明"
