@@ -140,75 +140,101 @@
 
 - 文档注释 所有的方法,所有的构造函数,所有包含文档化方法的对象.
 > ######文件
->		/**
->		 * @extends {goog.Disposable}
->		 */
->		project.MyClass = function(arg1, arg2) {
->		    // ...
->		};
+
+		/**
+		 * @file Description of file, its uses and information
+		 * about its dependencies.
+		 * @author dac@dreamarts.com.cn
+		 * @copyright DA Corporation. All Rights Reserved.
+		 */
 > ######Class
->		/**
->		 * Class making something fun and easy.
->		 * @param {string} arg1 An argument that makes this more interesting.
->		 * @param {Array.<number>} arg2 List of numbers to be processed.
->		 * @constructor
->		 * @extends {goog.Disposable}
->		 */
->		project.MyClass = function(arg1, arg2) {
->		    // ...
->		};
->		goog.inherits(project.MyClass, goog.Disposable);
-> ######函数
->		/**
->		 * Operates on an instance of MyClass and returns something.
->		 * @param {project.MyClass} obj Instance of MyClass which leads to a long
->		 *     comment that needs to be wrapped to two lines.
->		 * @return {boolean} Whether something occurred.
->		 */
->		function PR_someMethod(obj) {
->		    // ...
->		}
->######属性
->		/** @constructor */
->		project.MyClass = function() {
->  		/**
->   	     * Maximum number of things per pane.
->   		 * @type {number}
->   		 */
->  		this.someProperty = 4;
->		}
+
+		/**
+		 * This is a description of the MyClass constructor function.
+		 * @class
+		 * @classdesc This is a description of the MyClass class.
+		 */
+		function MyClass() {
+		}
+> ######函数 param,returns,example
+
+		/**
+		 * @param {string} somebody Somebody's name.
+		 */
+		function sayHello(somebody) {
+		    alert('Hello ' + somebody);
+		}
+		/**
+		 * This callback type is called `requestCallback` and is displayed as a global symbol.
+		 *
+		 * @callback requestCallback
+		 * @param {number} responseCode
+		 * @param {string} responseMessage
+		 */
+		/**
+		 * Does something asynchronously and executes the callback on completion.
+		 * @param {requestCallback} cb - The callback that handles the response.
+		 */
+		function doSomethingAsynchronously(cb) {
+		    // code
+		};
+		/**
+		 * Returns the sum of a and b
+		 * @param {Number} a
+		 * @param {Number} b
+		 * @param {Boolean} retArr If set to true, the function will return an array
+		 * @returns {Number|Array} Sum of a and b or an array that contains a, b and the sum of a and b.
+		 */
+		function sum(a, b, retArr) {
+		    if (retArr) {
+		        return [a, b, a + b];
+		    }
+		    return a + b;
+		}
+		/**
+		 * Uploader
+		 * @param {Object} config 组件配置（下面的参数为配置项，配置会写入属性，详细的配置说明请看属性部分）
+		 * @param {Button} config.button *，Button按钮的实例
+		 * @param {Queue} config.queue *，Queue队列的实例
+		 * @param {String|Array} config.type *，采用的上传方案
+		 * @param {Object} config.serverConfig *，服务器端配置
+		 * @param {String} config.urlsInputName *，存储文件路径的隐藏域的name名
+		 * @param {Boolean} config.isAllowUpload 是否允许上传文件
+		 * @param {Boolean} config.autoUpload 是否自动上传
+		 * @example
+		 * var uploader = new Uploader({button:button,queue:queue,serverConfig:{action:'test.php'}})
+		 */
+		function Uploader(config) {
+		}
+>######属性 type,const,private,public,protect
+		/**
+		 * @type {number}
+		 * @const
+		 */
+		var FOO = 1;
+		/** @const {number} */
+		var FOO = 1;
+		/** @type {(string|Array.<string>)} */
+		var foo;
+		/** @type {number} */
+		var bar = 1;
+		/**
+		 * My PrivateDiary.
+		 * @private
+		 */
+		var privateDiary= 2;
+		/**
+		 * My PublicDiary.
+		 * @public
+		 */
+		var publicDiary= 2;
+		/**
+		 * My ProtectDiary.
+		 * @protect
+		 */
+		var protectDiary= 2;
+
 >######tag
-	@author:作者
-	@argument:参数
-	@augments：参数
-	@class： 类
-	@constant：常数
-	@constructor：构造
-	@constructs： 构造
-	@default：默认值
-	@deprecated： 推荐，说明使用一个变量已不再支持
-	@description：说明
-	@example ：范例
-	@extends： 扩展 ，继承
-	@field：变量（非功能）
-	@fileOverview ：整个文件信息
-	@function： 功能 (表示该变量指向一个功能)
-	@inner || @private : 私有，内部
-	@ignore： 忽视 （文档生成的式后也将忽视这个变量）
-	@event：事件
-	@version：版本
-	@type：类型 描述预期的类型变量的值或返回值的函数
-	@throws :可能抛出的异常
-	@static： 静态，访问该变量不需要实例
-	@since： 自 （表明某属性特征，是在什么版本之后才有的）
-	@see： 描述相关的资源
-	@scope ||@lends： 作用域
-	@return ||@returns
-	@requires： 描述必须需要的资源
-	@public： 说明内在变量是公开的
-	@property ： 属性
-	@param：参数
-	@namespace： 命名空间
 		
 ##命名		
 ######数字,字母,下划线.数字不能开头.禁止其它字符集.采用驼峰命名格式.避免使用没有意义的单词.见名释义
