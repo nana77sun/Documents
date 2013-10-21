@@ -1,9 +1,10 @@
-#### 需申请账户
+## 需申请账户
  - dropbox
  - trello
  - github
 
 ========
+## 资源
 
 #### trello
  - https://trello.com/b/lTyM8YQ6/dac-03-yukari
@@ -17,8 +18,7 @@
 
 ========
 
-成员
-----
+## 成员
 #### dropbox
  - 徐 cntomxu
  - 李浩 lxj5891
@@ -28,3 +28,6 @@
  - 周 zhouyujie
  - 李 r2space
 
+#### trello
+
+#### dropbox
