@@ -1,7 +1,7 @@
 ##JSHint
 ###简介
 js静态代码检测工具
-###使用
+###安装和使用
 npm install jshint  
 jshint sample.js
 ###配置
@@ -176,7 +176,7 @@ https://github.com/es-analysis/plato
 3.在根目录下,定义.jshintrc文件,  
 4.plato -r -d report -l .jshintrc api  
 
-###yukari配置定义
+###yukari配置文件(.jshintrc)
 	{
 	    // YUKARI
 	    // Enforcing,默认不进行检查,true时检查
