@@ -207,7 +207,7 @@ https://github.com/es-analysis/plato
 	    // Relaxing,默认进行检查,true时,不检查
 	    "asi"           : false,//行尾写分号
 	    "boss"          : false,//比较时不能出现赋值语句
-	    "debug"         : false,//TODO不理解
+	    "debug"         : false,//禁止使用debug语句
 	    "eqnull"        : false,//TODO禁止和null判断
 	    "esnext"        : false,//禁止使用ECMAScript 6语法
 	    "evil"          : false,//禁止使用evil
