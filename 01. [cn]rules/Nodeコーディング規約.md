@@ -1,4 +1,3 @@
-
 ----
 #### 文件夹结构
 .gitignore
@@ -19,14 +18,14 @@ test
  - api
  - controllers
  - modules
- > - **文件名** mod_ 开头，不用复数型 ex. mod_group.js, mod_user.js
- > - **Schema** 要明确字段的type和description，需要包含以下5个方法
+ > 1. **文件名** mod_ 开头，不用复数型 ex. mod_group.js, mod_user.js
+ > 1. **Schema** 要明确字段的type和description，需要包含以下5个方法
  createat | 创建日
  createby | 创建者
  editat   | 最终编辑日
  editby   | 最终编辑者
  valid    | 有效
- > - **通用方法的命名**
+ > 1. **通用方法的命名**
  get      | 使用_id获取一条记录
  getList  |
  add      | 添加
@@ -34,8 +33,8 @@ test
  remove   | 删除
  total    | 件数
 
- > - **删除** 所有的删除操作，都进行逻辑删除，而不是物理删除
- > - **其他** 对参数的转换，变化等操作及对结果的共通的过滤等操作，不写业务逻辑
+ > 1. **删除** 所有的删除操作，都进行逻辑删除，而不是物理删除
+ > 1. **其他** 对参数的转换，变化等操作及对结果的共通的过滤等操作，不写业务逻辑
 
  - views
  - public
