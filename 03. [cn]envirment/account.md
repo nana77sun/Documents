@@ -27,7 +27,7 @@
  - 邵 fyx1014
  - 周 zhouyujie
  - 李 r2space
- - 刘飞 xzafei
+ - 曾 xiangrui-zeng
 
 #### trello
 
