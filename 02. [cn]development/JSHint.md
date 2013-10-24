@@ -1,10 +1,8 @@
 ##JSHint
 ###简介
 js静态代码检测工具
-###安装和使用
-npm install jshint  
-jshint sample.js
-###配置
+
+###配置文件属性说明
 系统默认配置文件.jshintrc  
 JSHint的检测模式有四种：强制，放松，环境，遗留（Legacy）
 ######强制
