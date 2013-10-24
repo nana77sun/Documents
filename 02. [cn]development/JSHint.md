@@ -7,9 +7,31 @@ js静态代码检测工具
 https://github.com/es-analysis/plato
 
 1.npm install -g plato  
-2.cd yukari根目录  
-3.在根目录下,定义.jshintrc文件,  
-4.plato -r -d report -l .jshintrc api  
+2.在被检测的JS文件目录下,定义.jshintrc文件,  
+3.plato -r -d report -l .jshintrc api  
+
+命令行参数
+
+	Usage : plato [options] file1.js file2.js ... fileN.js
+	  -h, --help
+	      Display this help text.
+	  -q, --quiet
+	      Reduce output to errors only
+	  -v, --version
+	      Print the version.
+	  -x, --exclude : String
+	      File exclusion regex
+	  -d, --dir : String *required*
+	      The output directory
+	  -r, --recurse
+	      Recursively search directories
+	  -l, --jshint : String
+	      Specify a jshintrc file for JSHint linting
+	  -t, --title : String
+	      Title of the report
+	  -D, --date : String
+	      Time to use as the report date (seconds, > 9999999999 assumed to be ms)
+例:plato -r -d report -l .jshintrc -t "My Awesome App" -x .json routes/*.js
 
 ###yukari配置文件(.jshintrc)
 	{
