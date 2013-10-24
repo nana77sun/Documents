@@ -172,27 +172,27 @@ These options are deprecated and will be removed soon. DO NOT use them.
 https://github.com/es-analysis/plato
 
 1.npm install -g plato  
-2.cd yukari跟目录  
+2.cd yukari根目录  
 3.在根目录下,定义.jshintrc文件,  
 4.plato -r -d report -l .jshintrc api  
 
 ###yukari配置文件(.jshintrc)
 	{
 	    // YUKARI
-	    // Enforcing,默认不进行检查,true时检查
+	    // Enforcing,默认(false)不进行检查,true时检查
 	    "bitwise"       : true,//禁止使用位运算符
 	    "camelcase"     : true,//强制变量名使用驼峰式风格或者大写字母加下划线风格
 	    "curly"         : true,//条件和循环语句中使用大括号
 	    "eqeqeq"        : true,//使用===和!==，而不是==和!=
 	    "ec3"           : false,//符合ECMAScript3规范(IE6,7,8)
-	    "forin"         : true,//TODO不理解
+	    "forin"         : true,//使用forin检查对象属性
 	    "immed"         : true,//不允许定义一个匿名函数，并立即执行
-	    "indent"        : 4,//缩进4空格
+	    "indent"        : 2,//缩进2空格
 	    "latedef"       : true,//变量先定义,再使用
 	    "newcap"        : true,//构造函数的名称以大写字母开头
 	    "noarg"         : true,//禁止使用arguments.caller和argument.callee
 	    "noempty"       : true, //不要使用空代码块
-	    "nonew"         : false,//TODO不理解
+	    "nonew"         : true,//禁止使用new构造对象
 	    "plusplus"      : false,//++,--的使用
 	    "quotmark"      : "double",//引号都使用双引号
 	    "undef"         : true,//禁止使用不声明的变量
@@ -202,31 +202,31 @@ https://github.com/es-analysis/plato
 	    "maxparams"     : false,//设置函数最多允许的参数个数
 	    "maxdepth"      : false,//设置大括号最大的嵌套次数
 	    "maxstatements" : false,//设置每个函数允许的最多语句
-	    "maxcomplexity" : false,//TODO不理解
+	    "maxcomplexity" : false,//代码复杂度,TODO不理解
 	    "maxlen"        : 120,//每行代码最大长度
-	    // Relaxing,默认进行检查,true时,不检查
+	    // Relaxing,默认(false)进行检查,true时,不检查
 	    "asi"           : false,//行尾写分号
 	    "boss"          : false,//比较时不能出现赋值语句
 	    "debug"         : false,//禁止使用debug语句
-	    "eqnull"        : false,//TODO禁止和null判断
+	    "eqnull"        : false,//禁止和null判断
 	    "esnext"        : false,//禁止使用ECMAScript 6语法
 	    "evil"          : false,//禁止使用evil
 	    "expr"          : false,//TODO不理解,期望出现赋值语句或函数调用时，出现表达式是否警告
 	    "funcscope"     : false,//禁止在控制语句里,生命变量,在作用域外使用
 	    "globalstrict"  : true,//允许global strict mode
-	    "iterator"      : false,//TODO禁止使用__iterator__属性
+	    "iterator"      : false,//禁止使用__iterator__属性
 	    "lastsemic"     : false,//禁止语句后面没有分号
 	    "laxbreak"      : false,//禁止使用不安全的换行
 	    "laxcomma"      : true,//允许使用前置逗号风格
 	    "loopfunc"      : false,//禁止在循环里使用函数
-		"moz"			: true,//Mozilla JavaScript extensions
+	    "moz"	    : true,//Mozilla JavaScript extensions
 	    "multistr"      : false,//禁止使用多行字符换,用\
-	    "proto"         : false,//TODO禁止使用__proto__属性
+	    "proto"         : false,//禁止使用__proto__属性
 	    "scripturl"     : false,//TODO不理解
 	    "smarttabs"     : false,//禁止tab和空格混用
 	    "shadow"        : false,//禁止声明其他地方已经声明过的变量
 	    "sub"           : false,//使用persion.name而不是persion['name']
-	    "supernew"      : false,//
+	    "supernew"      : false,//TODO不理解
 	    "validthis"     : false,//禁止在strict mode的非构造函数中使用this
 	    // Environments,表示是否是运行在所指的环境下
 	    "browser"       : true,//浏览器环境
