@@ -98,7 +98,8 @@ https://github.com/es-analysis/plato
 	    "rhino"         : false,//Rhino环境
 	    "worker"        : false,//Web Worker环境
 	    "wsh"           : false,//Windows Script Host环境
-	    "yui"           : false//yui环境  
+	    "yui"           : false,//yui环境
+	    "globals"       : {"describe": false, "it": false}
 	}
 	
 ###配置文件属性说明
@@ -257,6 +258,8 @@ These options let JSHint know about some pre-defined global variables.
 - worker
 - wsh
 - yui
+- globals  
+当，代码中使用了全局对象时，jihint会报没有定义的错误，这是可以在globals里定义来越过该检查
 ######环境
 These options are deprecated and will be removed soon. DO NOT use them.
 
