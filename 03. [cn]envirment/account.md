@@ -28,6 +28,7 @@
  - 周 zhouyujie
  - 李 r2space
  - 曾 xiangrui-zeng
+ - 李政 nana77sun
 
 #### trello
 
